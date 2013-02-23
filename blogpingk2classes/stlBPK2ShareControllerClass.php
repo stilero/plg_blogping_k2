@@ -28,7 +28,7 @@
  * along with BlogPingPro.  
  * If not, see <http://www.gnu.org/licenses/>.
  */
-class stlBPK2ShareControllerClass {
+class stlBPK2ShareControllerClass { 
 
     var $articleObject;
     var $config;

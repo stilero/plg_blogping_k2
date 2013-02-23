@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS `#__blogpingk2_log`;
+DROP TABLE IF EXISTS `#__blogpingk2_log`; 

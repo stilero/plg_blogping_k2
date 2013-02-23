@@ -30,7 +30,7 @@
 
 class stlK2BlogPingClass extends stlBPK2ShareControllerClass{
     var $PingClass;
-    var $pingServers;
+    var $pingServers; 
     
     function __construct($config) {
         parent::__construct($config);
