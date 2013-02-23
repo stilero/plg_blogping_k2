@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="k2" method="upgrade">
+	<name>K2 - BlogPing</name>
+	<author>Daniel Eliasson</author>
+	<creationDate>2012-jan-10</creationDate>
+	<copyright>Copyright (c) 2012-jan-10 Stilero Webdesign http://www.stilero.com. All rights reserved.</copyright>
+	<authorEmail>joomla@stilero.com</authorEmail>
+	<authorUrl>www.stilero.com</authorUrl>
+	<version>2.06</version>
+	<license>GPLv2</license>
+	<description>This plugin make Joomla ping like Wordpress. If you like this plugin, show your love and write a review at http://extensions.joomla.org</description>
+	<install>
+            <sql>
+                <file driver="mysql" charset="utf8">blogpingk2sql/plg_blogpingk2_install.sql</file>
+            </sql>
+	</install>
+	<uninstall>
+            <sql>
+                <file driver="mysql" charset="utf8">blogpingk2sql/plg_blogpingk2_uninstall.sql</file>
+            </sql>
+	</uninstall>	
+	<files>
+                <filename>index.html</filename>
+		<filename plugin="blogping">blogping.php</filename>
+                <folder>blogpingk2classes</folder>
+                <folder>blogpingk2sql</folder>
+	</files>
+	<languages folder="language">
+            <language tag="en-GB">en-GB.plg_k2_blogping.ini</language>
+            <language tag="pt-BR">pt-BR.plg_k2_blogping.ini</language>
+            <language tag="sv-SE">sv-SE.plg_k2_blogping.ini</language>
+        </languages>
+	<!-- Standard plugin parameters for Joomla! 1.5 -->	
+    <params>
+        <param name="catID" type="text"  default="" label="PLG_K2_BLOGPING_CATID" description="PLG_K2_BLOGPING_CATID_DESC"/>
+        <param name="pingServers" type="textarea" label="PLG_K2_BLOGPING_PINGSERVERS" description="PLG_K2_BLOGPING_PINGSERVERS_DESC" default="http://rpc.pingomatic.com/" cols="40" rows="10"/>
+    </params>
+    <params group="advanced" label="PLG_K2_BLOGPING_ADVSETTINGS">
+        <param name="delay" type="text"  default="15" label="PLG_K2_BLOGPING_DELAY" description="PLG_K2_BLOGPING_DELAY_DESC"/>
+        <param name="displayMessages" type="radio" default="1" label="PLG_K2_BLOGPING_DISPLAYMESSAGES" description="PLG_K2_BLOGPING_DISPLAYMESSAGES_DESC">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="extendedPing" type="radio" default="1" label="PLG_K2_BLOGPING_EXTENDEDPING" description="PLG_K2_BLOGPING_EXTENDEDPING_DESC">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="rssurl" type="text"  default="" label="PLG_K2_BLOGPING_RSSURL" description="PLG_K2_BLOGPING_RSSURL_DESC"/>
+        <param name="timeout" type="list" default="3" label="PLG_K2_BLOGPING_TIMEOUT" description="PLG_K2_BLOGPING_TIMEOUT_DESC">
+            <option value="2">2 s</option>
+            <option value="3">3 s</option>
+            <option value="5">5 s</option>
+            <option value="10">10 s</option>
+        </param>
+    </params>	
+    <!-- Standard plugin parameters for Joomla! 1.6+ -->
+    <config>
+        <fields name="params">
+            <fieldset name="settings" label="PLG_K2_BLOGPING_SETTINGS">
+                <field name="catID" type="text"  default="" label="PLG_K2_BLOGPING_CATID" description="PLG_K2_BLOGPING_CATID_DESC"/>
+                <field name="pingServers" type="textarea" label="PLG_K2_BLOGPING_PINGSERVERS" description="PLG_K2_BLOGPING_PINGSERVERS_DESC" default="http://rpc.pingomatic.com/" cols="40" rows="10"/>
+            </fieldset>
+            <fieldset name="advanced" label="PLG_K2_BLOGPING_ADVSETTINGS">
+                <field name="delay" type="text"  default="15" label="PLG_K2_BLOGPING_DELAY" description="PLG_K2_BLOGPING_DELAY_DESC"/>
+                <field name="displayMessages" type="radio" default="1" label="PLG_K2_BLOGPING_DISPLAYMESSAGES" description="PLG_K2_BLOGPING_DISPLAYMESSAGES_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="extendedPing" type="radio" default="1" label="PLG_K2_BLOGPING_EXTENDEDPING" description="PLG_K2_BLOGPING_EXTENDEDPING_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="rssurl" type="text"  default="" label="PLG_K2_BLOGPING_RSSURL" description="PLG_K2_BLOGPING_RSSURL_DESC"/>
+                <field name="timeout" type="list" default="3" label="PLG_K2_BLOGPING_TIMEOUT" description="PLG_K2_BLOGPING_TIMEOUT_DESC">
+                    <option value="2">2 s</option>
+                    <option value="3">3 s</option>
+                    <option value="5">5 s</option>
+                    <option value="10">10 s</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+	<administration>
+            <languages folder="language">
+                <language tag="en-GB">en-GB.plg_k2_blogping.ini</language>
+                <language tag="pt-BR">pt-BR.plg_k2_blogping.ini</language>
+                <language tag="sv-SE">sv-SE.plg_k2_blogping.ini</language>
+                <language tag="en-GB">en-GB.plg_k2_blogping.sys.ini</language>
+                <language tag="pt-BR">pt-BR.plg_k2_blogping.sys.ini</language>
+                <language tag="sv-SE">sv-SE.plg_k2_blogping.sys.ini</language>
+	    </languages>
+	</administration>
+</install>
